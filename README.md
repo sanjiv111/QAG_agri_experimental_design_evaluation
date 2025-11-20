@@ -1,4 +1,4 @@
-# Evaluation of Experimental Design Quality in AI Scientist for LLM based Agricultural Question Answering Generation (QAG) 
+## Evaluation of Experimental Design Quality in AI Scientist for LLM based Agricultural Question Answering Generation (QAG) 
 
 This repository contains our CS5063 group project on Evaluation of Experimental Design Quality for the AI Scientist system.
 
