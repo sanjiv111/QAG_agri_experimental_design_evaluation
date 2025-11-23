@@ -13,7 +13,7 @@ These components together represent the core of a valid experimental setup. The 
 
 ## AgriQAGCorpus
 
-We constructed a curated corpus of **50 Agricultural QAG research papers.**
+We constructed a curated corpus of **5 Agricultural QAG research papers.**
 For each paper, we extracted:
 - Ground-truth datasets
 - Baseline models
