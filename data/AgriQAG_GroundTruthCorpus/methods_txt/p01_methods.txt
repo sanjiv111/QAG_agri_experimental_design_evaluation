@@ -1,0 +1,89 @@
+Academic Editor: Andrea Prati
+Received: 28 February 2025
+Revised: 27 March 2025
+Accepted: 27 March 2025
+Published: 1 April 2025
+Citation: Xiong, J.; Pan, L.; Liu, Y.;
+Zhu, L.; Zhang, L.; Tan, S. Enhancing
+Plant Protection Knowledge with
+Large Language Models: A Fine-
+Tuned Question-Answering System
+Using LoRA. Appl. Sci. 2025, 15, 3850.
+https://doi.org/10.3390/
+app15073850
+Copyright: © 2025 by the authors.
+Licensee MDPI, Basel, Switzerland.
+This article is an open access article
+distributed under the terms and
+conditions of the Creative Commons
+Attribution (CC BY) license
+(https://creativecommons.org/
+licenses/by/4.0/).
+Article
+Enhancing Plant Protection Knowledge with Large Language
+Models: A Fine-Tuned Question-Answering System Using LoRA
+Jie Xiong, Lingmin Pan, Yanjiao Liu, Lei Zhu
+, Lizhuo Zhang
+and Siqiao Tan *
+College of Information and Intelligence, Hunan Agricultural University, Changsha 410128, China;
+xj990328@stu.hunau.edu.cn (J.X.); lingminpan@stu.hunau.edu.cn (L.P.); liuyj213@stu.hunau.edu.cn (Y.L.);
+leizhu@hunau.edu.cn (L.Z.); zhanglizhuo@hunau.edu.cn (L.Z.)
+* Correspondence: tsq@hunau.edu.cn
+Abstract: To enhance the accessibility and accuracy of plant protection knowledge for
+agricultural practitioners, this study develops an intelligent question-answering (QA) sys-
+tem based on a large language model (LLM). A local knowledge base was constructed by
+vectorizing 7000 research papers and books in the field of plant protection, from which
+568 representative papers were selected to generate QA data using an LLM. After data
+cleaning and filtering, a fine-tuning dataset comprising 9000 question–answer pairs was
+curated. To optimize the model’s performance, low-rank adaptation (LoRA) was applied to
+the InterLM-20B model, resulting in the InterLM-20B-LoRA, which was integrated with
+Langchain-ChatChat and the local knowledge base to develop the QA system. Additionally,
+retrieval-augmented generation (RAG) technology was implemented to enhance response
+accuracy by enabling the model to retrieve relevant field-specific knowledge before gener-
+ating answers, effectively mitigating the risk of hallucinated information. The experimental
+results demonstrate that the proposed system achieves an answer accuracy of 97%, high-
+lighting its potential as an advanced solution for intelligent agricultural QA services.
+Keywords: plant protection; QA system; LLMs; low-rank adaptive; retrieval-augmented
+generation
+1. Introduction
+Plant protection is a critical component of modern agricultural production, encompass-
+ing pest and disease management, soil health preservation, and crop yield optimization [1,2].
+The rapid advancement of agricultural practices has introduced complex challenges, in-
+cluding the emergence of novel plant pathogens, increasing pest resistance to chemical
+control measures, and the impacts of climate change on crop productivity [3,4]. Accurate,
+timely plant protection knowledge is essential. This is particularly true for farmers, who
+are the primary field practitioners and often lack specialized expertise. We aim to provide
+them with practical, real-time recommendations. These guidelines are designed to address
+their daily challenges effectively. However, conventional knowledge acquisition methods,
+such as expert consultations, printed reference materials, and fragmented online resources,
+are often time-consuming, require specialized expertise, and may not provide real-time,
+context-specific recommendations. Moreover, variations in crop species, regional envi-
+ronmental conditions, and pest dynamics necessitate tailored solutions, making generic
+knowledge dissemination approaches insufficient to address the diverse and evolving
+needs of the agricultural sector.
+In recent years, large language models (LLMs) have demonstrated exceptional nat-
+ural language understanding and generation capabilities, finding applications in diverse
+Appl. Sci. 2025, 15, 3850
+https://doi.org/10.3390/app15073850
+
+Appl. Sci. 2025, 15, 3850
+2 of 17
+fields such as healthcare, finance, and legal services [5–7]. Their ability to process complex
+queries and generate contextually relevant responses makes them promising candidates
+for question-answering (QA) systems. However, applying LLMs to highly specialized
+domains such as plant protection presents significant challenges. One major limitation is
+their lack of domain-specific knowledge, as pre-trained models rely primarily on publicly
+available datasets that often lack high-quality, expert-reviewed agricultural content. Conse-
+quently, these models may generate incomplete, outdated, or misleading responses when
+addressing plant protection issues. Additionally, LLMs are prone to the well-documented
+hallucination problem, where they produce factually incorrect or unverifiable information.
+In plant protection, where accurate and scientifically validated knowledge is essential for
+effective decision-making, such hallucinations can result in incorrect diagnoses, improper
+pesticide applications, and ineffective pest management strategies, potentially leading to
+economic losses and environmental harm [8]. Furthermore, traditional LLMs struggle to
+adapt to region-specific agricultural conditions, as factors such as climatic variations, soil
+characteristics, and pest dynamics necessitate dynamic and context-aware responses that
+generic models fail to provide.
+To mitigate these challenges, fine-tuning has been widely explored to enhance LLM
+performance in specialized domains. However, conventional fine-tuning modifies a large
+number of parameters, requiring extensive com

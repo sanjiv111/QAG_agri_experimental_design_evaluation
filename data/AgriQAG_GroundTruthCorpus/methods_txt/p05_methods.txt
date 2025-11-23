@@ -1,0 +1,42 @@
+3
+Implementation Details
+3.1
+Experiments
+Selection of LLMs: The LLMs selected for ini-
+tial zero-shot experiments are shown in Table 2.
+(Further details of LLMs are in Appendix C).
+Punjabi
+Hindi
+English
+Llama 3.1 8B
+Llama 3.1 8B
+Airavata 7B
+Llama 3 8B
+Llama 3 8B
+Llama 3 8B
+Navarasa 7B
+Navarasa 7B
+Deepseek 8B
+Mistral 7B
+Mistral 7B
+Gemma 8B
+Table 2: LLMs selected for each language. The best
+performing LLM for each language is in bold.
+Prompt Selection: We started with Silva et al.
+(2023)’s prompt, which was originally designed for
+agriculture examination contexts. However, our
+long-term goal is to support farmers with advi-
+sories. Hence, we adapted that prompt and gen-
+erated six different prompt variations, which are
+2https://www.youtube.com/watch?v=MYkBswpxRcA
+2
+
+discussed in Appendix D. Zero-shot experiments
+were conducted to select the best prompt.
+LLM Fine-tuning: The best performing LLM
+under the zero-shot setting was fine-tuned with the
+best prompt, using the synthetic dataset we created.
+We also conducted an experiment to evaluate the
+efficacy of the translate-test approach for Hindi and
+Punjabi. Implementation details and hyperparame-
+ters are in Appendix E.
