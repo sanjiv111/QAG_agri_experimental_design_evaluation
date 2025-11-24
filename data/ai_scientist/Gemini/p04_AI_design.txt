@@ -1,0 +1,32 @@
+Experimental Design Description for Paper p04
+Paper Title: AgriGPT: A Large Language Model for Agricultural Question Answering Agricultural Domain: agricultural QA with reasoning.
+
+Experimental Objective: To determine whether a domain-adapted LLM with continual pretraining, supervised fine-tuning, and Tri-RAG retrieval can significantly improve accuracy and factual grounding in agricultural question answering.
+
+Dataset Description Training Dataset: Agri-342K instruction dataset (342k agricultural QA pairs) generated via a multi-agent data engine (extraction agent, generation agent, distillation agent). Evaluation Dataset: AgriBench-13K benchmark (13 agricultural task types, 12,780 samples) curated and expert-annotated. Preprocessing: Not explicitly detailed (implied: corpus cleaning, data generation).
+
+Model Description The AgriGPT architecture is based on LLaMA2-7B and combines three stages: (1) continual pretraining on an agricultural corpus; (2) supervised fine-tuning on Agri-342K; and (3) a Tri-RAG tri-channel retrieval mechanism (dense, BM25, and Knowledge Graph (KG) retrieval) for inference.
+
+Experimental Procedure
+
+Build Agri-342K using multi-agent data engine.
+
+Continual pretrain LLaMA2-7B on agricultural texts using LoRA.
+
+Supervised fine-tuning on Agri-342K instruction dataset.
+
+Construct Tri-RAG: dense retrieval, BM25 sparse retrieval, and KG retrieval.
+
+Run models on AgriBench-13K across 13 tasks and evaluate accuracy, F1, BLEU, ROUGE-L, and LLM-judge scores.
+
+Evaluation Setup Metrics: F1, BLEU, ROUGE-L, and LLM-as-a-judge score. Task: Multi-step agricultural QA (extraction, classification, reasoning, multi-hop, advisory). Baselines: General LLMs (baseline models are implied).
+
+Strengths
+
+Efficient fine-tuning using LoRA.
+
+Use of Retrieval-Augmented Generation (RAG) to enhance factual grounding.
+
+Novel Tri-RAG (three-channel retrieval) to improve multi-hop reasoning.
+Limitations Missing human evaluation. No safety or factuality verification, missing agronomist evaluation.
+

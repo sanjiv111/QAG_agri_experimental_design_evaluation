@@ -1,0 +1,40 @@
+Experimental Design Description for Paper p03
+Paper Title: Research on Sem-RAG: A Corn Planting Knowledge Q&A Algorithm Agricultural Domain: corn planting QA.
+
+Experimental Objective: To investigate enhance retrieval accuracy and reduce hallucinations in agricultural QA?
+
+Dataset Description Source/Size/Type: CornData, consisting of 1763 QA pairs extracted from corn cultivation books and websites. Preprocessing: Not specified in metadata (implied: chunking, extraction, encoding).
+
+Model Description A novel Sem-RAG architecture is used, featuring dual vector stores, a triple extraction mechanism, Leiden communities, and a LoRA-tuned Qwen3-8B as the generator model.
+
+Experimental Procedure
+
+Full pipeline: chunking.
+
+Triple extraction.
+
+Graph.
+
+Leiden.
+
+Community summaries.
+
+Encoders.
+
+Vector stores.
+
+LoRA.
+
+Retrieval.
+
+Generation.
+
+Evaluation Setup Metrics: Precision, Recall, and F1 for extracted triples. Task: Single-turn factual QA with RAG. Baselines: NaiveRAG and GraphRAG.
+
+Strengths
+
+Efficient fine-tuning using LoRA.
+
+Use of Retrieval-Augmented Generation (RAG) to enhance factual grounding.
+
+Novel Sem-RAG with dual vector stores and triple extraction to enhance retrieval accuracy.

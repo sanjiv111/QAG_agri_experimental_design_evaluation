@@ -1,0 +1,18 @@
+Experimental Design Description for Paper p07
+Paper Title: AgriBERT: A Pretrained Language Model for Agricultural Knowledge Extraction and Question Answering Agricultural Domain: agricultural NLP (QA + NER).
+
+Experimental Objective: To evaluate whether domain-specific pretraining on agricultural text improves performance on agricultural QA and NER tasks compared to general-domain BERT models.
+
+Dataset Description Pretraining Corpus: 1.2B-token agricultural text from textbooks, research articles, extension documents, and advisory portals. Fine-tuning Datasets: AgriQA-5K (5,000 samples for QA) and AgriNER-10K (10,000 samples for NER). Preprocessing: Corpus collection and cleaning (HTML removal, normalization, tokenization).
+
+Model Description AgriBERT is based on the BERT-base architecture, features an agriculture-specific extended vocabulary (3,200 tokens), and is pretrained using Masked Language Modeling (MLM) and Next Sentence Prediction (NSP) objectives. It is fine-tuned with specific QA and NER heads.
+
+Experimental ProcedureCollect and clean agricultural corpus.Pretrain AgriBERT for $800\text{k}$ steps with MLM + NSP.Extend vocabulary with agriculture-specific terms.Fine-tune QA on AgriQA-5K and NER on AgriNER-10K.Compare results with BERT-base, BioBERT, and SciBERT.
+
+Evaluation Setup Metrics: F1 score, Exact Match (EM), Precision, Recall. Task: Span-extraction QA and Named-Entity Recognition (NER) for agricultural terms. Baselines: BERT-base, BioBERT, and SciBERT.
+
+Strengths
+
+Use of domain-specific pretraining/adaptation on agricultural corpus.
+
+Limitations Missing human evaluation.

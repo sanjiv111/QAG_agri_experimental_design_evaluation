@@ -1,0 +1,30 @@
+Experimental Design Description for Paper p01
+Paper Title: Enhancing Plant Protection Knowledge with Large Language Models: A fine tuned Question-Answering System Using LoRA. Agricultural Domain: plant protection QA.
+
+Experimental Objective: To evaluate whether the fine-tuned InterLM-20B with LoRA and RAG retrieval improves answer accuracy for plant protection QA.
+
+Dataset Description Source/Size/Type: 9000 Question-Answering Generation (QAG) pairs derived from 7000 plant protection papers and books. Preprocessing: Documents are vectorized using SBERT embeddings and stored in a semantic knowledge base.
+
+Model Description The core model is InterLM-20B, which is fine-tuned using the LoRA (Low-Rank Adaptation) technique. A Retrieval-Augmented Generation (RAG) system is implemented, where relevant documents are retrieved using SBERT embeddings from a semantic knowledge base.
+
+Experimental Procedure
+
+Preprocess plant protection documents.
+
+Build QA dataset and encode documents with SBERT.
+
+Construct semantic vector knowledge base.
+
+Apply RAG for retrieving relevant chunks.
+
+Apply LoRA fine-tuning to InterLM-20B.
+
+Evaluate accuracy on hold-out test set
+
+Evaluation Setup Metrics: Accuracy. Task: Single-turn factual QA over plant protection technical documents. Baselines: Un-tuned baseline systems (implied by key findings stating the LoRA-tuned model "outperform[s] baseline systems").
+
+Strengths
+
+Efficient fine-tuning using LoRA.
+
+Use of Retrieval-Augmented Generation (RAG) to enhance factual grounding.
