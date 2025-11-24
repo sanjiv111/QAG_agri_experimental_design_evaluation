@@ -1,0 +1,69 @@
+Paper p01 — Experimental Design Description
+1. Experimental Objective
+
+To evaluate whether large language models (LLMs) can effectively enhance plant protection knowledge through high-accuracy agricultural question answering.
+
+2. Dataset Description
+
+Source: A domain-specific plant protection QA dataset.
+Size: Not specified in metadata
+Type: Question–answer pairs related to plant disease, pests, and protection.
+Preprocessing: Not specified in metadata
+
+3. Model Description
+
+Primary model: InterLM-20B fine-tuned with LoRA for agricultural QA.
+Additional methods:
+
+RAG baseline for retrieval comparison.
+
+ChatGPT used as an external reference/baseline.
+Training details: Not specified in metadata
+
+4. Experimental Procedure
+
+Data Preparation
+
+Collect and prepare plant-protection QA pairs.
+
+Preprocess the dataset for LoRA fine-tuning (details not specified).
+
+Model Training
+
+Fine-tune InterLM-20B using LoRA.
+
+Configure LoRA adapters (hyperparameters not specified).
+
+Inference
+
+Use the tuned model to answer agricultural questions.
+
+Compare predictions against RAG and ChatGPT.
+
+5. Evaluation Setup
+
+Metrics: Answer accuracy.
+Baselines:
+
+RAG
+
+ChatGPT
+Test set: Not specified in metadata
+
+6. Strengths
+
+Uses a strong domain-adapted LLM (InterLM-20B).
+
+Fine-tuning with LoRA is computationally efficient.
+
+Includes comparisons with relevant baselines (ChatGPT, RAG).
+
+7. Limitations
+
+Dataset size, composition, and preprocessing steps are not specified.
+
+No human evaluation.
+
+Test set characteristics not described.
+
+No details on training settings or hyperparameters.
