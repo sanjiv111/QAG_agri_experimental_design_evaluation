@@ -1,1 +1,0 @@
-You are an AI Scientist. Your task is to generate a complete and rigorous experimental design for evaluating a Question Answering Generation (QAG) system in the agricultural domain. The main objective is to produce a clear, reproducible, and academically sound experimental design. 
