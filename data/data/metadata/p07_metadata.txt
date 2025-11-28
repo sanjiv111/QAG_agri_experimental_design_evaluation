@@ -1,9 +1,0 @@
-Paper ID: p07
-Research Question: How can an agricultural-domain BERT model improve entity extraction and QA performance in agricultural corpora?
-Agricultural Domain: Pests, diseases, crops, soils, agricultural chemicals
-Dataset Description: Annotated agricultural text corpus including entities (disease, crop, soil, chemical) and relations; processed for NER and QA tasks.
-Model Description: AgriBERT (BERT adapted with domain-specific pretraining); multi-layer encoder with NER and relation extraction components.
-QA/QAG Task Type: QA with NER-supported retrieval
-Experimental Procedure Summary: Build agricultural corpus → annotate entities/relations → pretrain BERT on agricultural domain → train NER/RE models → integrate into QA pipeline → evaluate QA performance.
-Evaluation Metrics: NER accuracy, relation extraction metrics, QA accuracy.
-Key Findings: Domain-adapted BERT improves precision in agricultural NLP tasks and enhances QA reliability.

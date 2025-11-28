@@ -1,9 +1,0 @@
-Paper ID: p02
-Research Question: How to extract structured entities and relations from agricultural QA data using BE-BILSTM?
-Agricultural Domain: Soil, crops, pests, agricultural trade
-Dataset Description: 20,000 Malaysian agricultural QA items (soil, pests & diseases, crops, trade), annotated using BIOES tags and manually corrected; split 70% train, 30% test.
-Model Description: BERT + BiLSTM + CRF pipeline for entity extraction and relation extraction.
-QA/QAG Task Type: Information extraction for QA systems (upstream of QA)
-Experimental Procedure Summary: Collect QA data → perform semi-structured XML extraction → perform HMM/BERT-BiLSTM entity extraction → extract relations → convert outputs into JSON → evaluate extraction performance.
-Evaluation Metrics: Entity labeling accuracy, relation extraction performance (not numerically provided).
-Key Findings: BE-BiLSTM improves extraction accuracy and enables conversion of QA data into structured knowledge.

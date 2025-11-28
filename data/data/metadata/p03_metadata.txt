@@ -1,9 +1,0 @@
-Paper ID: p03
-Research Question: How can dual-store semantic retrieval (Sem-RAG) improve agricultural QA for corn planting knowledge?
-Agricultural Domain: Corn cultivation, agronomy
-Dataset Description: Expert corn-knowledge documents processed into fixed-length chunks, semantic triples extracted into knowledge graph structures.
-Model Description: Sem-RAG combining chunk-level embeddings with community-level semantic summaries derived using Leiden clustering + TextRank.
-QA/QAG Task Type: Knowledge-based QA
-Experimental Procedure Summary: Chunk texts → extract triples → build knowledge graph → detect communities → generate semantic summaries → vectorize chunks/summaries → joint retrieval → evaluate QA performance.
-Evaluation Metrics: Not explicitly listed (typical QA accuracy, relevance).
-Key Findings: Sem-RAG enhances retrieval depth and reduces hallucinations through structured semantic representations.

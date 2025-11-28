@@ -1,9 +1,0 @@
-Paper ID: p04
-Research Question: How to build a unified agricultural LLM ecosystem with scalable instruction generation and multi-path retrieval (Tri-RAG)?
-Agricultural Domain: Multi-domain agriculture (9 core areas)
-Dataset Description: Agri-342K instruction dataset created using multi-agent data engine; multilingual variants; benchmark suite AgriBench-13K for evaluation.
-Model Description: AgriGPT with continual pretraining + supervised fine-tuning; Tri-RAG combining dense retrieval, sparse retrieval, and multi-hop knowledge graph reasoning.
-QA/QAG Task Type: Instruction-based QA, reasoning tasks, diagnostic reasoning
-Experimental Procedure Summary: Build multi-agent data engine → generate/curate instructions → domain-adaptive pretraining → supervised fine-tuning → implement Tri-RAG → evaluate on AgriBench-13K.
-Evaluation Metrics: BLEU, METEOR, ROUGE, LLM-score, correctness, completeness, coherence, relevance.
-Key Findings: AgriGPT outperforms strong LLM baselines with significant improvements in reasoning and factual accuracy.
