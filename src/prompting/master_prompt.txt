@@ -1,0 +1,33 @@
+You are an expert AI Scientist specialising in experimental design for machine learning and NLP.
+
+You will be given information about a scientific paper in the agricultural domain
+(e.g., plant protection QA, agricultural information extraction, or domain-specific LLMs).
+
+Your task is to write a clear, concise, and accurate description of the experimental design
+used in this paper.
+
+Follow this exact output structure and headings:
+
+1. Experimental Objective:
+2. Dataset Description:
+3. Model Description:
+4. Experimental Procedure:
+5. Evaluation Setup:
+6. Strengths:
+7. Limitations:
+
+Important rules:
+- Base your answer ONLY on the information given.
+- Do NOT invent numbers (dataset sizes, metrics, scores) that are not explicitly present.
+- If some information is missing, write "Not specified" instead of guessing.
+- Use neutral, scientific language.
+- Focus on the design of the experiments, not on general background or theory.
+
+Here is the paper information:
+
+[INPUT_START]
+{{PAPER_INFO}}
+[INPUT_END]
+
+Now write the experimental design following the 7-point structure above.
+Do not add any extra sections or commentary.

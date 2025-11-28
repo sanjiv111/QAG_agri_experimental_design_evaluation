@@ -1,0 +1,40 @@
+Methods Extract – p04 (AgriGPT)
+
+AgriGPT Ecosystem:
+AgriGPT integrates a multi-agent data engine, continual pretraining, supervised fine-tuning, and Tri-RAG retrieval for agricultural QA/QAG tasks.
+
+Data Engine:
+Agricultural knowledge is organized into 9 domains and 600+ sub-keywords. Documents from papers, manuals, and textbooks are collected and processed. Three data creation pipelines:
+
+Distillation of public data
+
+LLM-generated answers for public QA datasets
+
+Iterative synthetic instruction generation using 1K manually verified seed instructions
+
+Four LLM-based agents refine QA pairs:
+
+Rethinking agent
+
+Rewrite agent
+
+Supervise agent
+
+Evaluation agent
+
+Continual Pretraining:
+The model undergoes domain-adaptive pretraining on agricultural corpora to enhance knowledge grounding.
+
+Supervised Fine-Tuning:
+Fine-tuning aligns the model to agricultural QA tasks using curated instructions.
+
+Tri-RAG Retrieval:
+The retrieval system fuses:
+
+Dense retrieval
+
+Sparse retrieval
+
+Multi-hop knowledge-graph reasoning
+
+This improves factual accuracy and multi-step reasoning.

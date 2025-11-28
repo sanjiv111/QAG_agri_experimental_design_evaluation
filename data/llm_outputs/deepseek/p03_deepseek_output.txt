@@ -1,0 +1,30 @@
+1. Experimental Objective:  
+To enhance agricultural question answering for corn planting through a dual-store semantic retrieval framework that combines chunk-level embeddings with community-level semantic summaries.
+
+2. Dataset Description:  
+Not specified.
+
+3. Model Description:  
+The Sem-RAG framework uses:  
+- Text chunking and semantic triple extraction  
+- Leiden algorithm for community detection  
+- TextRank for keyword extraction  
+- LLM-based semantic parsing for condition/process pattern extraction  
+- Dense vector encoding for both chunks and summaries
+
+4. Experimental Procedure:  
+- Knowledge base construction: Corn knowledge documents are divided into fixed-length chunks, and semantic triples are extracted to build a local knowledge graph.  
+- Community detection: The Leiden algorithm partitions the semantic graph into communities via node movement, refinement, and aggregation.  
+- Summary construction: For each community, keywords and core triples are extracted, and LLM-based parsing identifies condition/process patterns.  
+- Retrieval & Inference: During QA, both chunk embeddings and thematic summaries are jointly retrieved.
+
+5. Evaluation Setup:  
+Not specified.
+
+6. Strengths:  
+- Combines fine-grained chunk-level retrieval with high-level thematic summaries  
+- Uses semantic graphs and community detection to improve retrieval coherence  
+- Balances local detail with high-level reasoning
+
+7. Limitations:  
+Not specified.

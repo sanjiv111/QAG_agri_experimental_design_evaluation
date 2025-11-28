@@ -1,0 +1,20 @@
+1. Experimental Objective:
+To extract structured entities and relations from agricultural question-answer data using a BERT-BiLSTM-CRF (BE-BiLSTM) model.
+
+2. Dataset Description:
+A dataset of 20,000 Malaysian agricultural QA items covering the domains of soil, pests & diseases, crops, and agricultural trade. The data is annotated using BIOES tags and has been manually corrected. It is split into 70% for training and 30% for testing.
+
+3. Model Description:
+A pipeline model combining BERT, a Bidirectional LSTM (BiLSTM), and a Conditional Random Field (CRF) layer for joint entity extraction and relation extraction.
+
+4. Experimental Procedure:
+The procedure involves: collecting QA data; performing semi-structured XML extraction; performing entity extraction using either HMM or the BERT-BiLSTM model; extracting relations; converting the outputs into JSON format; and evaluating the extraction performance.
+
+5. Evaluation Setup:
+Evaluation is based on entity labeling accuracy and relation extraction performance. No specific numerical results are provided in the given information.
+
+6. Strengths:
+The use of a manually corrected, domain-specific dataset and a hybrid BE-BiLSTM model is reported to improve extraction accuracy and enable the conversion of QA data into structured knowledge.
+
+7. Limitations:
+The specific numerical results for the evaluation metrics (entity labeling accuracy and relation extraction performance) are not provided. The comparative performance of the HMM method mentioned in the procedure is also not detailed.

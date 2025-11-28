@@ -1,0 +1,40 @@
+Methods Extract – p03
+
+Overview of Sem-RAG:
+Sem-RAG is a dual-store semantic retrieval framework enhancing agricultural QA (corn planting). It combines chunk-level embeddings with community-level semantic summaries.
+
+Knowledge Base Construction:
+
+Corn knowledge documents are divided into fixed-length text chunks.
+
+Each chunk is processed to extract semantic triples (head, relation, tail).
+
+These triples are used to build a local knowledge graph.
+
+Community Detection (Leiden Algorithm):
+Semantic graphs are partitioned into communities by maximizing modularity. The Leiden algorithm performs iterative optimization with:
+
+Node movement
+
+Community refinement
+
+Graph aggregation
+
+This yields semantically coherent topic clusters.
+
+Community Summary Construction:
+For each community:
+
+Keywords are extracted (TextRank).
+
+Relationship filtering selects core triples.
+
+Condition/process patterns are extracted using LLM-based semantic parsing.
+
+Each summary contains theme, key relations, conditions, and steps.
+
+Semantic Vectorization:
+Chunks and summaries are encoded into dense vector representations to support fine-grained retrieval.
+
+Retrieval & Inference:
+During QA, Sem-RAG jointly retrieves from both chunk embeddings and thematic summaries, balancing local detail with high-level reasoning.

@@ -1,0 +1,20 @@
+1. Experimental Objective:
+To investigate how an agricultural-domain BERT model can improve entity extraction and question answering (QA) performance in agricultural corpora.
+
+2. Dataset Description:
+An annotated agricultural text corpus including entities (disease, crop, soil, chemical) and relations. The dataset was processed for Named Entity Recognition (NER) and QA tasks.
+
+3. Model Description:
+The primary model is AgriBERT, a BERT model adapted with domain-specific pretraining. It is a multi-layer encoder model with components for NER and relation extraction.
+
+4. Experimental Procedure:
+The procedure involved building an agricultural corpus, annotating it with entities and relations, and then pretraining the BERT model on this agricultural domain. The pretrained model was then used to train NER and relation extraction models. These components were subsequently integrated into a QA pipeline, and the QA performance was evaluated.
+
+5. Evaluation Setup:
+The evaluation was based on NER accuracy, relation extraction metrics, and QA accuracy.
+
+6. Strengths:
+The experimental design incorporates domain-specific pretraining and integrates entity and relation extraction directly into the QA pipeline, aiming to enhance the reliability of the QA system.
+
+7. Limitations:
+Not specified.

@@ -1,0 +1,32 @@
+Experimental Objective:
+The objective is to improve agricultural natural language processing and question answering by pretraining a BERT-style model on agricultural text (AgriBERT) and applying it to named entity recognition, relation extraction, and QA tasks over an agricultural knowledge corpus.
+
+Dataset Description:
+The dataset consists of agricultural documents and text corpora covering topics such as crop varieties, pests and diseases, soil types, fertilisers, and farming practices. The corpus is cleaned and normalised, and entities are annotated into domain-specific categories (e.g., crop, disease, pest, soil, chemical). Relationships between entities, such as crop–disease or soil–crop associations, are also annotated where needed. Portions of the corpus are used for pretraining, while labelled subsets are used for NER, relation extraction, and QA training and evaluation.
+
+Model Description:
+AgriBERT is a domain-adapted variant of BERT that is further pre-trained on the agricultural corpus to better capture agricultural terminology and discourse patterns. On top of AgriBERT, task-specific heads are added for NER (token classification), relation extraction (classification over entity pairs), and QA (span or sequence generation depending on the task setup). The shared encoder allows transfer of domain knowledge across tasks.
+
+Experimental Procedure:
+1. Collect and preprocess agricultural texts, performing cleaning and tokenisation.
+2. Further pretrain BERT on the agricultural corpus to create AgriBERT.
+3. Prepare labelled datasets for NER and, if applicable, relation extraction and QA from the annotated corpus.
+4. Fine-tune AgriBERT separately for NER, relation extraction, and QA tasks using standard supervised training.
+5. Evaluate the NER model on recognising agricultural entities in held-out text.
+6. Evaluate QA performance by using AgriBERT (with or without retrieval) to answer agricultural questions from the test set.
+7. Compare AgriBERT-based models to non-domain-adapted baselines or simpler models as reported in the paper.
+
+Evaluation Setup:
+Evaluation uses standard NLP metrics. For NER, token-level or entity-level precision, recall, and F1 are computed for each entity category and overall. For relation extraction, classification metrics such as precision, recall, and F1 are used. For QA, accuracy or span-level F1 scores are reported depending on the question-answering formulation. Performance of AgriBERT is compared to generic BERT baselines to show the gain from domain adaptation.
+
+Strengths:
+- Explores domain-adaptive pretraining for agriculture, which is directly relevant to agricultural QA.
+- Uses a multi-task setup (NER, relation extraction, QA), enabling shared representations of agricultural concepts.
+- Demonstrates that a domain-specific encoder can outperform generic models on agricultural NLP tasks.
+- Provides a realistic foundation for building agricultural QAG and QA systems that rely on accurate entity identification.
+
+Limitations:
+- The description does not give detailed corpus statistics or annotation procedures.
+- The extent to which QA performance improves in realistic user scenarios is not fully clear from the summary.
+- It is not explicit how much of the improvement comes from pretraining versus task-specific fine-tuning.
+- Cross-lingual and low-resource settings are not discussed in the brief description.
