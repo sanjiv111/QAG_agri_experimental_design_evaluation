@@ -1,0 +1,41 @@
+## Experimental Design for Paper p01
+
+### 1. Experimental Objective:
+[cite_start]The objective is to determine how a **LoRA-tuned Large Language Model (LLM)**, when combined with **Retrieval-Augmented Generation (RAG)**, can improve **factual accuracy** and **reduce hallucinations** in **plant protection question-answering systems**[cite: 1].
+
+---
+
+### 2. Dataset Description:
+[cite_start]The final dataset contains **9,000 high-quality QA pairs**[cite: 3]. [cite_start]It was derived from an initial collection of **7,000 agricultural documents**[cite: 2]. [cite_start]This initial data underwent several cleaning and filtering steps, including deduplication, standardization, filtering by **perplexity**, **length**, and **format**, and the creation of a **vector knowledge base**[cite: 2, 3]. [cite_start]The domain is **plant protection, pests, and crop disease management**[cite: 2].
+
+---
+
+### 3. Model Description:
+[cite_start]The base model is **InternLM-20B**[cite: 4]. [cite_start]It was fine-tuned using the **Low-Rank Adaptation (LoRA)** method[cite: 4]. [cite_start]The model is integrated into a **Retrieval-Augmented Generation (RAG)** pipeline[cite: 4]. [cite_start]The retrieval component uses **FAISS embeddings** and **similarity search**[cite: 4]. [cite_start]The task is **domain-specific question answering** (plant protection)[cite: 5].
+
+---
+
+### 4. Experimental Procedure:
+[cite_start]The experimental procedure consisted of the following steps[cite: 5]:
+1.  **Construct dataset**
+2.  **Preprocess and standardize QA data**
+3.  **Build local knowledge base**
+4.  **Embed documents**
+5.  **Fine-tune model using LoRA**
+6.  **Integrate retrieval + generation**
+7.  **Evaluate factual and semantic consistency**
+
+---
+
+### 5. Evaluation Setup:
+[cite_start]The evaluation metrics used were **ROUGE**, **BERTScore**, and **FactCC**[cite: 6]. [cite_start]The performance was evaluated on **factual and semantic consistency**[cite: 5].
+
+---
+
+### 6. Strengths:
+[cite_start]The study utilized a combined approach of **LoRA fine-tuning** on an **InternLM-20B LLM** and **Retrieval-Augmented Generation (RAG)**[cite: 4]. [cite_start]It focused on a high-value, specific domain (**plant protection**) and employed a large, **high-quality dataset** (9,000 QA pairs) constructed from 7,000 agricultural documents[cite: 2, 3]. [cite_start]The evaluation included metrics targeting both **generation quality** (ROUGE, BERTScore) and **factual consistency** (FactCC)[cite: 6].
+
+---
+
+### 7. Limitations:
+Not specified.

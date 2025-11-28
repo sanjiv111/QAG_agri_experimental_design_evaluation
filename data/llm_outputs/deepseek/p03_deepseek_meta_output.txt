@@ -1,0 +1,20 @@
+1. Experimental Objective:  
+To investigate how dual-store semantic retrieval (Sem-RAG) can improve agricultural question answering for corn planting knowledge.
+
+2. Dataset Description:  
+Expert corn-knowledge documents processed into fixed-length chunks. Semantic triples were extracted from these chunks and structured into knowledge graphs.
+
+3. Model Description:  
+Sem-RAG model combining chunk-level embeddings with community-level semantic summaries. Semantic summaries were derived using Leiden clustering and TextRank.
+
+4. Experimental Procedure:  
+Chunk texts were processed to extract triples, which were used to build a knowledge graph. Communities were detected within the graph, and semantic summaries were generated for each community. Both chunks and summaries were vectorized. Joint retrieval was performed using these representations, and QA performance was evaluated.
+
+5. Evaluation Setup:  
+Not specified.
+
+6. Strengths:  
+The approach enhances retrieval depth and reduces hallucinations through structured semantic representations combining both chunk-level and community-level information.
+
+7. Limitations:  
+Not specified.

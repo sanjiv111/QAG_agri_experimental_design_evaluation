@@ -1,0 +1,32 @@
+Experimental Objective:
+The objective is to convert agricultural question-answering data into a semi-structured format by accurately extracting entities and relations using a BERT–BiLSTM–CRF (BE-BiLSTM) model, so that the resulting structured information can support downstream agricultural QA and analysis.
+
+Dataset Description:
+The dataset consists of 20,000 agricultural QA instances collected from Malaysian agricultural websites and online information portals. The questions and answers cover three main categories: soil types, crop diseases and pests, and agricultural product trade. The data is split into 70% training and 30% test sets. A pre-trained NER model is used for initial labelling, followed by manual correction. BIOES tagging is applied, and entities are annotated into categories such as soil, disease, and crop, including examples like soil types, pest names, and crop names. Relationships between entities, such as “crop–pest” or “price–quantity”, are also defined for later extraction.
+
+Model Description:
+The BE-BiLSTM model combines BERT, a contextual word embedding model, with a BiLSTM sequence encoder and a CRF decoding layer. BERT provides contextualised representations for each token in the QA text. These embeddings are passed to a bidirectional LSTM to capture forward and backward sequence dependencies. The BiLSTM outputs are concatenated and processed by a CRF layer that models label dependencies and outputs the most probable label sequence. This architecture is used both for entity extraction and, in combination with rules and templates, for relation identification.
+
+Experimental Procedure:
+1. Collect raw QA data from multiple Malaysian agricultural information sources.
+2. Perform initial automatic annotation using a pre-trained NER model and refine the labels manually using BIOES tagging.
+3. Define ontology categories and relationship types for entities such as soil, crop, disease, and trade attributes.
+4. Encode QA texts with BERT to obtain contextual word embeddings.
+5. Train the BiLSTM–CRF model on the annotated dataset to predict entity labels across the three major categories.
+6. Use the learned model to extract entities and derive relations between entities based on sequence labels and predefined patterns.
+7. Convert recognised entities and relations into semi-structured JSON objects suitable for storage in databases or knowledge bases.
+
+Evaluation Setup:
+The experimental design evaluates the BE-BiLSTM model on the held-out test set. Performance is assessed in terms of sequence labelling quality and relation extraction quality, using standard NER and structured prediction metrics as reported in the paper (e.g., precision, recall, and F1 scores for entity categories and relationships). The impact of combining BERT representations with BiLSTM and CRF is analysed by comparing to simpler configurations.
+
+Strengths:
+- Uses a reasonably large, real-world QA dataset covering several important agricultural domains.
+- Combines strong contextual embeddings (BERT) with sequence modelling (BiLSTM) and structured decoding (CRF).
+- Produces semi-structured JSON outputs that can be easily stored and consumed by retrieval or QA systems.
+- Includes explicit annotation categories and BIOES tagging, which supports reproducible entity extraction.
+
+Limitations:
+- The paper focuses on information extraction, not on a full end-to-end QA system, so the impact on actual QA performance is indirect.
+- The dataset is geographically specific (Malaysia) and may not generalise to other regions or languages without adaptation.
+- Manual annotation quality and inter-annotator agreement are not detailed in the summary.
+- The relation extraction process partly relies on rules and templates, which may be brittle for edge cases or new relation types.

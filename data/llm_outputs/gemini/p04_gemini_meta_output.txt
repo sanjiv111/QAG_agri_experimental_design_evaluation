@@ -1,0 +1,53 @@
+## 🔬 Experimental Design: Unified Agricultural LLM Ecosystem
+
+### 1. Experimental Objective:
+[cite_start]The objective is to build a unified agricultural Large Language Model (LLM) ecosystem using scalable instruction generation and a multi-path retrieval method called Tri-RAG[cite: 1].
+
+---
+
+### 2. Dataset Description:
+* [cite_start]**Instruction Dataset:** Agri-342K, an instruction dataset created using a multi-agent data engine[cite: 2].
+* [cite_start]**Multilingual Variants:** The dataset includes multilingual variants[cite: 2].
+* [cite_start]**Domain Coverage:** Multi-domain agriculture, covering 9 core areas[cite: 2].
+* [cite_start]**Benchmark Suite:** AgriBench-13K is used for evaluation[cite: 3].
+
+---
+
+### 3. Model Description:
+* [cite_start]**Model Name:** AgriGPT[cite: 3].
+* [cite_start]**Training Strategy:** Continual pretraining followed by supervised fine-tuning[cite: 3].
+* [cite_start]**Retrieval Mechanism (Tri-RAG):** Tri-RAG combines three components: dense retrieval, sparse retrieval, and multi-hop knowledge graph reasoning[cite: 4].
+* [cite_start]**Task Type:** Instruction-based QA, reasoning tasks, and diagnostic reasoning[cite: 5].
+
+---
+
+### 4. Experimental Procedure:
+[cite_start]The experimental procedure involves the following steps[cite: 5]:
+1.  [cite_start]Build a **multi-agent data engine**[cite: 5].
+2.  [cite_start]**Generate/curate instructions**[cite: 5].
+3.  [cite_start]Perform **domain-adaptive pretraining**[cite: 5].
+4.  [cite_start]Conduct **supervised fine-tuning**[cite: 5].
+5.  [cite_start]Implement the **Tri-RAG** retrieval mechanism[cite: 5].
+6.  [cite_start]**Evaluate** on the AgriBench-13K benchmark suite[cite: 5].
+
+---
+
+### 5. Evaluation Setup:
+* [cite_start]**Benchmark:** AgriBench-13K[cite: 3, 5].
+* [cite_start]**Metrics:** BLEU, METEOR, ROUGE, LLM-score, correctness, completeness, coherence, and relevance[cite: 6].
+* **Baselines:** Not specified.
+
+---
+
+### 6. Strengths:
+* [cite_start]The system addresses multi-domain agriculture, covering 9 core areas[cite: 2].
+* [cite_start]The use of a **multi-agent data engine** enables the creation of a large-scale **Agri-342K** instruction dataset[cite: 2].
+* [cite_start]The architecture includes a sophisticated **Tri-RAG** system combining dense retrieval, sparse retrieval, and multi-hop knowledge graph reasoning[cite: 4].
+* [cite_start]Key findings indicate **AgriGPT outperforms strong LLM baselines**[cite: 7].
+* [cite_start]The model achieves **significant improvements in reasoning and factual accuracy**[cite: 7].
+* [cite_start]Evaluation uses a comprehensive set of metrics, including standard NLP metrics (BLEU, ROUGE) and LLM-specific ones (LLM-score, correctness, coherence)[cite: 6].
+
+---
+
+### 7. Limitations:
+Not specified.

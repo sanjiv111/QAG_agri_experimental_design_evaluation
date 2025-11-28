@@ -1,0 +1,9 @@
+Paper ID: p01
+Research Question: How can a LoRA-tuned LLM combined with Retrieval-Augmented Generation improve factual accuracy and reduce hallucinations in plant protection question answering systems?
+Agricultural Domain: Plant protection, pests, crop disease management
+Dataset Description: 7000 agricultural documents were cleaned, deduplicated, standardized, filtered by perplexity, length, and format; final dataset contains 9000 high-quality QA pairs and a vector knowledge base.
+Model Description: InternLM-20B fine-tuned using LoRA, integrated into a RAG pipeline with FAISS embeddings and similarity search.
+QA/QAG Task Type: Domain-specific question answering (plant protection)
+Experimental Procedure Summary: Construct dataset → preprocess and standardize QA data → build local knowledge base → embed documents → fine-tune model using LoRA → integrate retrieval + generation → evaluate factual and semantic consistency.
+Evaluation Metrics: ROUGE, BERTScore, FactCC.
+Key Findings: RAG-based LoRA model improves accuracy, reduces hallucination, and enhances domain-specific reliability.

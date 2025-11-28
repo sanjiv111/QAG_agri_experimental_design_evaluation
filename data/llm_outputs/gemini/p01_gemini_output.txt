@@ -1,0 +1,55 @@
+## Experimental Design Description
+
+### 1. Experimental Objective:
+[cite_start]The objective is to adapt a **Transformer-based Large Language Model (LLM)**, **InternLM**, for **domain-specific plant protection Question-Answering (QA) tasks**[cite: 5, 10]. [cite_start]The system integrates a local knowledge base using a **Retrieval-Augmented Generation (RAG)** framework to improve factual reliability and reduce hallucinations in responses[cite: 11, 13].
+
+---
+
+### 2. Dataset Description:
+[cite_start]The study constructed a **high-quality plant protection dataset**[cite: 1].
+
+* [cite_start]**Initial Corpus:** The dataset was initially compiled from **7000 professional papers and books**[cite: 1].
+* **Cleaning and Filtering:**
+    * [cite_start]**Duplicate entries** were removed using **DOI, title similarity, abstract matching, and MinHash text similarity**[cite: 2].
+    * [cite_start]Data was **cleaned** by removing **HTML tags, special characters,** and **normalizing punctuation, sentence structure, and dosage units**[cite: 3].
+    * [cite_start]**Low-quality data** was filtered using **perplexity scores and length thresholds**[cite: 4].
+* [cite_start]**Final Dataset:** The final dataset includes **9000 high-quality QA pairs** used to support fine-tuning[cite: 4].
+
+---
+
+### 3. Model Description:
+[cite_start]The base model is **InternLM**, a **Transformer-based LLM optimized for multilingual QA tasks**[cite: 5].
+
+* [cite_start]**Architecture Features:** It utilizes **hybrid parallelism (data/model/pipeline)** and **sparse attention** for efficient training and inference[cite: 6].
+* [cite_start]**Adaptation:** The model is adapted using **self-supervised learning** on large unlabeled corpora[cite: 8].
+* [cite_start]**Capabilities:** It supports **multimodal fusion** for text, image, and audio analysis[cite: 7].
+
+---
+
+### 4. Experimental Procedure:
+The experimental procedure involves two main components: **Fine-Tuning** and **Integration into a RAG framework**.
+
+* [cite_start]**Fine-Tuning Method:** **Low-Rank Adaptation (LoRA)** was used for **parameter-efficient tuning**[cite: 9, 10]. [cite_start]LoRA injects trainable low-rank matrices into specific layers to reduce trainable parameters and prevent overfitting[cite: 9].
+* [cite_start]**Task:** The LoRA fine-tuning was performed for **domain-specific plant protection QA tasks**[cite: 10].
+* [cite_start]**RAG Integration:** A **local knowledge base** was integrated into the **RAG framework**[cite: 11].
+    * [cite_start]**Embedding:** Documents in the knowledge base are embedded using **FAISS**[cite: 12].
+    * [cite_start]**Retrieval:** Documents are retrieved using **similarity search**[cite: 12].
+    * [cite_start]**Generation:** The retrieved documents are used as **context for the generation component**[cite: 13].
+
+---
+
+### 5. Evaluation Setup:
+Not specified
+
+---
+
+### 6. Strengths:
+* [cite_start]**High-Quality Dataset:** Construction of a high-quality dataset with rigorous cleaning steps, including **duplicate removal, normalization, and low-quality data filtering** using perplexity scores[cite: 2, 3, 4].
+* [cite_start]**Parameter Efficiency:** Use of **LoRA fine-tuning** enables **parameter-efficient tuning** and helps **prevent overfitting**[cite: 9, 10].
+* [cite_start]**Factual Reliability:** Integration of a **RAG framework** using a local knowledge base to **reduce hallucinations and improve factual reliability** in domain-specific responses[cite: 11, 13].
+* [cite_start]**Model Efficiency:** The base model, InternLM, is optimized for efficiency using **hybrid parallelism and sparse attention**[cite: 6].
+
+---
+
+### 7. Limitations:
+Not specified

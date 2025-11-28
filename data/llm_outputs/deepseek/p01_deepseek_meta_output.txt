@@ -1,0 +1,20 @@
+1. Experimental Objective:  
+To investigate how a LoRA-tuned Large Language Model (LLM) combined with Retrieval-Augmented Generation (RAG) can improve factual accuracy and reduce hallucinations in plant protection question-answering systems.
+
+2. Dataset Description:  
+The dataset is constructed from 7000 agricultural documents. The data was cleaned, deduplicated, and standardized. Filtering was performed based on perplexity, length, and format. The final dataset contains 9000 high-quality question-answer pairs and a vector knowledge base.
+
+3. Model Description:  
+The model used is InternLM-20B, fine-tuned using Low-Rank Adaptation (LoRA). It is integrated into a RAG pipeline that uses FAISS for document embeddings and similarity search.
+
+4. Experimental Procedure:  
+The procedure involves constructing the dataset, preprocessing and standardizing the QA data, and building a local knowledge base. Documents are embedded, and the InternLM-20B model is fine-tuned using LoRA. The fine-tuned model is then integrated into a RAG framework that combines retrieval (via similarity search) and generation for question answering.
+
+5. Evaluation Setup:  
+The system is evaluated using the metrics ROUGE, BERTScore, and FactCC.
+
+6. Strengths:  
+The approach improves factual accuracy, reduces hallucination, and enhances domain-specific reliability in the generated responses.
+
+7. Limitations:  
+Not specified.

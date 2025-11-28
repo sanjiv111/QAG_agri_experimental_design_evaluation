@@ -1,0 +1,13 @@
+Methods Extract – p01
+
+Plant Protection Dataset Construction:
+The study constructs a high-quality plant protection dataset containing 7000 professional papers and books. During screening, duplicate entries are removed using DOI, title similarity, abstract matching, and MinHash text similarity. Data is cleaned by removing HTML tags, special characters, and normalizing punctuation, sentence structure, and dosage units. Low-quality data is filtered using perplexity scores and length thresholds. Final dataset includes 9000 high-quality QA pairs supporting fine-tuning.
+
+InternLM Model:
+InternLM is a Transformer-based LLM optimized for multilingual QA tasks. It uses hybrid parallelism (data/model/pipeline) and sparse attention for efficient training and inference. It supports multimodal fusion for text, image, and audio analysis. The model is adapted with self-supervised learning on large unlabeled corpora.
+
+LoRA Fine-Tuning:
+Low-Rank Adaptation (LoRA) injects trainable low-rank matrices into specific layers, reducing trainable parameters and preventing overfitting. It enables parameter-efficient tuning of the LLM for domain-specific plant protection QA tasks.
+
+Retrieval-Augmented Generation (RAG):
+The system integrates a local knowledge base into a RAG framework. Documents are embedded using FAISS and retrieved by similarity search. Retrieved documents serve as context for the generation component, reducing hallucinations and improving factual reliability in domain-specific responses.

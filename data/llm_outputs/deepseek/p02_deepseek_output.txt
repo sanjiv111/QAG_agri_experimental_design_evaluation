@@ -1,0 +1,20 @@
+1. Experimental Objective:
+Not specified.
+
+2. Dataset Description:
+The dataset consists of 20,000 agricultural question-answer items collected from Malaysian agricultural websites, covering topics such as soil, pests, crops, and trade. The data was split into 70% for training and 30% for testing. Data annotation used BIOES tagging and manual correction, with three entity categories: soil, crop, and disease.
+
+3. Model Description:
+The primary model is BERT–BiLSTM–CRF (BE-BiLSTM). It uses BERT to generate text embeddings, which are fed into a Bidirectional LSTM (BiLSTM) to capture contextual signals. The outputs are then passed through a Conditional Random Field (CRF) layer to predict entity labels. The model is configured to jointly train entity extraction and relation extraction.
+
+4. Experimental Procedure:
+The framework processes both semi-structured and unstructured agricultural QA data. Semi-structured data uses XML-based rules for mapping to entity categories. For unstructured text, entity extraction is performed using an HMM-based sequence labeling model with BIOES tagging. The BE-BiLSTM model is trained on the annotated dataset to extract entities and their relations. The extracted information is then converted into a semi-structured JSON format using predefined templates for database integration.
+
+5. Evaluation Setup:
+Not specified.
+
+6. Strengths:
+The system integrates multiple information extraction techniques, handling both semi-structured and unstructured data. The BE-BiLSTM model leverages the strengths of BERT, BiLSTM, and CRF for effective sequence labeling and relation extraction. The joint training of entity and relation extraction may improve model coherence.
+
+7. Limitations:
+Not specified.
