@@ -1,0 +1,34 @@
+p03:Gemini-Method Section-Error Annotation
+
+1. Experimental Objective:
+Content level error categories:
+MISSING_INFO: The output fails to explicitly state the most critical goal mentioned in the Gold standard: to reduce hallucinations in large-language-model-based question answering.
+STRUCTURAL_ERROR: A Vague output.
+
+2. Dataset Description:
+MISSING INFO: The output completely omits the name of the dedicated evaluation dataset, CornData, which is used in Gold Section 8/Evaluation. 
+
+3. Model Description:
+MISSING_INFO: Missing the core architectural names: Surface Semantic Store and Fine-Grained Semantic Store (the dual stores). 
+The output lists components but not the conceptual architecture.
+STRUCTURAL_ERROR: The output lists the process steps for building the semantic stores (e.g., Triple Extraction, Community Detection, Summary Construction) as Architectural Components in this section, rather than the core design principles and function.
+
+
+4. Experimental Procedure:
+MISSING_INF0: Missing all 8 explicit procedural steps from the Gold standard, including encoding chunks/summaries into dense vector representations, retrieval of both, feeding them to the LLM, and the final evaluation step.
+STRUCTURAL_ERROR:The few steps included are misplaced in Section 3 and Section 4 is absent, making the procedure entirely irreproducible.
+
+5. Evaluation Step:
+MISSING_INFO : The entire section detailing the evaluation plan is missing, replaced by "Not specified."
+STRUCTURAL_ERROR: Section is present but its content is empty/unspecified.
+
+6.Strengths:
+MISSING_INFO: Missing the critical strength that the system addresses a concrete problem of retrieval quality and hallucination in domain-specific QA.
+WORDW/CLARITY_ISSUE: Missing the strength that the pipeline provides a realistic pipeline for applying LLMs to knowledge-intensive agricultural QA.
+
+7.Limitations: 
+MISSING_INFO : Missing two key limitations: 1) The pipeline may be computationally expensive to deploy at scale and 2) Human evaluation of answer usefulness and domain expert judgment are not emphasized.
+
+
+
+

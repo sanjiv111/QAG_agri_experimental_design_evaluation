@@ -1,0 +1,29 @@
+p07:Gemini-Method Section-Error Annotation
+
+1. Experimental Objective:
+Content level error categories:
+MISSING_INFO: Missing the critical focus on pretraining a BERT-style model and the explicit goal to improve agricultural NLP and QA using this domain adaptation method. The output only mentions the implementation of a combined pipeline.
+
+2. Dataset Description:
+MISSING INFO: Missing the crucial distinction that portions of the corpus are used for pretraining, while labelled subsets are used for training and evaluation of the downstream tasks (NER, RE, QA).
+
+3. Model Description:
+MISSING_INFO_1: Missing the detail of task-specific heads added on top of AgriBERT for NER (token classification), relation extraction (classification over entity pairs), and QA. The output uses generic terms ("multi-layer classification").
+MISSING_INFO_2: Missing the core function of the shared encoder that enables the transfer of domain knowledge across the three tasks (NER, RE, QA).
+
+4. Experimental Procedure:
+MISSING_INF0: Missing all explicit procedural steps related to pretraining, fine-tuning task-specific heads, and evaluation against a test set.
+STRUCTURAL_ERROR: The output describes only a three-step QA inference pipeline (matching, retrieval, generation) instead of the detailed, sequential, 7-step experimental process of the Gold standard, which includes pretraining, preparing labelled data, fine-tuning, and structured evaluation.
+
+5. Evaluation Step:
+MISSING_INFO : The entire section detailing the evaluation plan is missing, replaced by "Not specified."
+STRUCTURAL_ERROR: Section is present but its content is empty/unspecified.
+
+6.Strengths:
+MISSING_INFO: Missing the critical strength that the domain-specific encoder outperforms generic models on agricultural NLP tasks.
+
+7.Limitations: 
+MISSING_INFO :Missing three critical limitations: 1) Lack of detailed corpus statistics or annotation procedures. 2) Unclear performance improvement in realistic user scenarios. 3) Ambiguity in improvement attribution (pretraining vs. fine-tuning).
+STRUCTURAL_ERROR: The output only lists one generic limitation related to missing evaluation setup, failing to report the content-level limitations.
+
+
