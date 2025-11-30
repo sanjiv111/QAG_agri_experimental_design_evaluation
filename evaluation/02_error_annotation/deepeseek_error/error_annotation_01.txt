@@ -1,0 +1,56 @@
+p01:DeepSeek-Method Section-Error Annotation
+
+1. Experimental Objective:
+Content level error categories:
+MISSING_INFO : Objective Not Provided.
+STRUCTURAL_ERROR : Section present but it is empty.
+
+Standard level error categories: 
+CONTEXTC: Failure to establish task purpose that leads to incorrect inference about experiment.
+
+2. Dataset Description:
+MISSING INFO: No mention of knowledge base construction.
+MISSING_INFO: Missing QA pair generation details.
+CLARITY_ISSUE: Dataset description lacks technical depth.
+STRUCTURAL_ERROR: Dataset and KB details collapsed together.
+
+CONTEXTC: Dataset, QA Creation, and Knowledge base creation merged, causing incorrect conceptual flow. 
+WORDW: Use of vague terms ('multimodal fusion', 'collaborative processing'), not present in gold.
+
+3. Model Description:
+HALLUCINATION_1: Claims multimodal fusion support which is (not in gold description). 
+HALLUCINATION_2: Sparse attention capabilities (not in gold).
+MISSING_INFO: Missing details about LoRA integration steps.
+MISSING_INFO: Missing explanation of RAG architecture (FAISS-based vector score and retrieval).
+
+NAMEN: Mentions capabilities such as 'multimodal fusion' (not in gold).
+WORDW: Incorrect model terminology like: multimodal fusion.
+
+
+4. Experimental Procedure:
+MISSING_INFO: Missing data collection and QA construction steps.
+MISSING_INFO: Missing evaluation step.
+STRUCTURAL_ERROR: Procedure steps in incorrect order.
+CLARITY_ISSUE: Steps vague or incomplete.
+
+CONTEXTC: Procedure steps are out of order (fine-tuning described before embedding/indexing).
+
+5. Evaluation Step:
+MISSING_INFO : Entire evaluation part is missing.
+STRUCTURAL ERROR: Section present but it is empty.
+
+CONTEXTC: Output implies evaluation not required which is incorrect inference.
+
+6.Strengths:
+MISSING_INFO: Several strengths missing from gold.
+CLARITY_ISSUE: Strengths generic and lacking rationale. 
+
+CONTEXTC: Strengths mismatches in experiment purpose.
+
+7.Limitations: 
+MISSING_INFO : No limitations provided. 
+STRUCTURAL ERROR: Section present but it is empty.
+
+#SUMMARY:
+- There are major missing information across all sections. There were Severe structural errors, multiple hallucinations in model description, contextual errors and numerous unverifiable claims. 
+
