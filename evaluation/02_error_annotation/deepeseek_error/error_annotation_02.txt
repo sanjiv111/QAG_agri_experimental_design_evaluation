@@ -1,0 +1,39 @@
+p02:DeepSeek-Method Section-Error Annotation
+
+1. Experimental Objective:
+Content level error categories:
+MISSING_INFO : Objective Not Provided.
+STRUCTURAL_ERROR : Section present but it is empty.
+
+Standard level error categories: 
+CONTEXTC: Failure to establish task purpose that leads to incorrect inference about experiment.
+
+2. Dataset Description:
+MISSING INFO: Missing definition of relationships(e.g. 'crop-pest', 'price-quantity') that were defined for later extraction.
+CLARITY_ISSUE: Missing detail on the initial use of a pre-trained NER model for initial labeling. 
+
+3. Model Description:
+CLARITY_ISSUE: Description of the BERT-BiLSTM-CRF interaction is generic. It specifically misses the detailed function of CRF layer, which is to model label dependencies to 
+output the most probable sequence. 
+
+
+4. Experimental Procedure:
+STRUCTURAL_ERROR: The steps are simplified. It misses the structural distinction that the HMM-based sequence labeling is used for the initial unstructured
+extraction, and BE-BiLSTM model is then trained on the annotated dataset. 
+
+5. Evaluation Step:
+MISSING_INFO : Entire evaluation part is missing.
+STRUCTURAL ERROR: Section present but it is empty.
+
+CONTEXTC: Output implies evaluation not required which is incorrect inference.
+
+6.Strengths:
+MISSING_INFO: There are missing specific strength related to explicit annotation categories and BIOES tagging which supports reproducible entity extraction.
+CLARITY_ISSUE: Strengths are generic and lacks detailed rationale.
+
+7.Limitations: 
+MISSING_INFO : No limitations provided. 
+STRUCTURAL ERROR: Section present but it is empty.
+
+#SUMMARY:
+- There are major missing information across all sections. The most common error is the lack of detail where sections are either empty or the conceptual flow of the procedure is simplified. No explicit Hallucinations were identified.

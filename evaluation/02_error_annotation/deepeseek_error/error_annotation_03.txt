@@ -1,0 +1,41 @@
+p03:DeepSeek-Method Section-Error Annotation
+
+1. Experimental Objective:
+Content level error categories:
+MISSING_INFO : Missing the explicit goal of the framework which is to reduce hallucinations in large language models based question answering. 
+CLARITY_ISSUE : The objective is less precise by omitting the specific problem (hallucination) that the Sem-RAG framework is intended to address.
+
+2. Dataset Description:
+MISSING INFO: Entire description missing, including the source documents (agronomic knowledge, cultivation practices) and the dedicated evaluation dataset (Corn Data).
+CLARITY_ISSUE: Section present but it is empty/unspecified.
+
+3. Model Description:
+MISSING_INFO_1: Missing the core architectural explanation of the Dual-Store Architecture (Surface Semantic Store and Fine-Grained Semantic Store). 
+MISSING_INFO_2: Missing the crucial final step of using a Large Language Model for answer generation conditioned on the retrieved context.
+CLARITY_ISSUE: The description focuses on listing components (e.g., Leiden algorithm) rather than describing the conceptual dual-store framework.
+
+NAMEN: Explicitly lists TextRank for keyword extraction, which is not cited as a core named component in the Model Description section of the gold text.
+
+4. Experimental Procedure:
+MISSING_INF0_1: Missing the step of encoding both chunks and summaries into dense vector representations.
+MISSING_INFO_2: Missing the step of feeding the retrieved texts and summaries to the LLM to generate the final answer.
+MISSING_INFO_3: Missing the final evaluation step where QA performance is evaluated on the CornData dataset.
+STRUCTURAL_ERROR: The 8-step gold procedure is aggregated into 4 high-level phases, resulting in a vague, structurally weak process description.
+
+
+5. Evaluation Step:
+MISSING_INFO : Entire evaluation part is missing.
+STRUCTURAL ERROR: Section present but it is empty.
+
+CONTEXTC: Output implies evaluation not required which is incorrect inference.
+
+6.Strengths:
+MISSING_INFO_1: Missing the strength related to addressing the concrete problem of reducing hallucination in domain-specific QA.
+MISSING_INFO_2: Missing the strength that the pipeline provides a realistic/complete framework for applying LLMs to knowledge-intensive agricultural QA.
+CLARITY_ISSUE: Strengths are generic and lack detailed rationale (e.g., "Balances local detail with high-level reasoning" is less specific than "Leverages graph-based community detection to organize knowledge and produce interpretable summaries").
+
+7.Limitations: 
+MISSING_INFO : No limitations provided. 
+STRUCTURAL ERROR: Section present but it is empty.
+
+

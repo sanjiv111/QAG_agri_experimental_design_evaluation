@@ -1,0 +1,41 @@
+p04:DeepSeek-Method Section-Error Annotation
+
+1. Experimental Objective:
+Content level error categories:
+MISSING_INFO : Missing the explicit, critical goal to demonstrate that the ecosystem outperforms general-purpose LLMs on agricultural QA and reasoning tasks. 
+CLARITY_ISSUE : The objective is stated as a list of integrated components rather than a goal statement focused on capability and performance.
+
+2. Dataset Description:
+MISSING INFO_1: Missing the name of the main instruction dataset (Agri-342K) and its status as large.
+MISSING_INFO_2: Missing the name and purpose of the evaluation benchmark (AgriBench-13K) and its multi-task nature.
+CLARITY_ISSUE: DeepSeek focuses on the specific number of seed instructions (1,000) while omitting the final dataset name.
+
+3. Model Description:
+MISSING_INFO_1: Missing the detail that the Tri-RAG is integrated specifically at inference time.
+MISSING_INFO_2: Missing the detail that multiple model sizes are evaluated and compared against baselines.
+CLARITY_ISSUE: Fails to mention the fine-tuning dataset name (Agri-342K).
+
+NAMEN: Explicitly lists TextRank for keyword extraction, which is not cited as a core named component in the Model Description section of the gold text.
+
+4. Experimental Procedure:
+MISSING_INF0: Missing the crucial final steps of constructing the AgriBench-13K benchmark, and running/reporting automatic and human metrics.
+STRUCTURAL_ERROR: The 7-step Gold procedure is aggregated into 4 vague, high-level statements in DeepSeek.
+CLARITY_ISSUE: Steps are generic (e.g., "Agricultural knowledge is structured and processed") rather than distinct actions.
+
+
+5. Evaluation Step:
+MISSING_INFO : Entire evaluation part is missing.
+STRUCTURAL ERROR: Section present but it is empty.
+
+CONTEXTC: Output implies evaluation not required which is incorrect inference.
+
+6.Strengths:
+MISSING_INFO_1: Missing the specific strength that the multi-agent refinement is used to reduce hallucinations.
+MISSING_INFO_2: Missing the explicit statement that the system is an end-to-end ecosystem, which explicitly includes the benchmark.
+CLARITY_ISSUE: Strengths are presented as a single run-on sentence, making the description less structured and clear than the multi-point format of the gold text.
+
+7.Limitations: 
+MISSING_INFO : No limitations provided. 
+STRUCTURAL ERROR: Section present but it is empty.
+
+

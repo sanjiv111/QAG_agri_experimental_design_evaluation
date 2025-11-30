@@ -1,0 +1,40 @@
+p07:DeepSeek-Method Section-Error Annotation
+
+1. Experimental Objective:
+Content level error categories:
+MISSING_INFO: Missing the specific focus on pretraining a BERT-style model and the explicit goal to improve agricultural NLP and QA using this method.
+CLARITY_ISSUE: Objective is Vague.
+
+2. Dataset Description:
+MISSING INFO: Missing the crucial distinction that portions of the corpus are used for pretraining, while labelled subsets are used for training and evaluation of the downstream tasks.
+CLARITY_ISSUE: The Gold summary emphasizes the use of labelled subsets for NER/RE/QA training, not explicit knowledge graph integration as the sole purpose of the annotated data.
+
+3. Model Description:
+MISSING_INFO_1: Missing the architectural detail of task-specific heads added on top of AgriBERT for NER (token classification), RE, and QA.
+MISSING_INFO_2: Missing the core function of the shared encoder that allows the transfer of domain knowledge across the three tasks.
+CLARITY_ISSUE: Human Gold uses specific mechanism descriptions like token classification (for NER) and classification over entity pairs (for RE)but deepSeek uses generic term
+like: 'multi layer classification and post processing'.
+
+
+4. Experimental Procedure:
+MISSING_INF0: Missing all explicit steps for fine-tuning 22and evaluation against a test set23.
+STRUCTURAL_ERROR: The Gold standard provides a 7-step experimental procedure that includes pretraining , preparing labelled datasets , fine-tuning , evaluation (NER, QA) , and comparison to baselines. All these steps are missing in DeepSeek. 
+MISSING_INFO: Missing all explicit steps for fine-tuning and evaluation against a test set.
+
+
+5. Evaluation Step:
+MISSING_INFO : Entire evaluation part is missing.
+STRUCTURAL ERROR: Section present but it is empty.
+
+CONTEXTC: Output implies evaluation not required which is incorrect inference.
+
+6.Strengths:
+MISSING_INFO_1: Missing the key strength that the model outperforms generic models on agricultural NLP tasks.
+MISSING_INFO_2: Missing the strength that the system provides a realistic foundation for building agricultural QAG and QA systems.
+
+
+7.Limitations: 
+MISSING_INFO : No limitations provided. 
+STRUCTURAL ERROR: Section present but it is empty.
+
+
