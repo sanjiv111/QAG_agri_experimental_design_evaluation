@@ -1,0 +1,78 @@
+You are an expert reviewer trained in scientific evaluation, NLP, and experimental methodology.
+Your task is to critically evaluate an LLM-generated experimental design against a
+human-written gold-standard design from a peer-reviewed research paper.
+
+#HUMAN GOLD EXPERIMENTAL DESIGN
+{}
+
+#LLM-GENERATED EXPERIMENTAL DESIGN
+{}
+
+#EVALUATION FRAMEWORK (CRITICAL ANALYSIS)
+
+Evaluate the LLM output along 4 pillars of scientific quality.
+Each pillar must be scored on a 1–5 scale, and justified with evidence.
+
+---------------------------------------------------
+1. SCIENTIFIC ACCURACY (1–5)
+- Are the objectives correctly captured?
+- Are dataset details preserved without hallucination?
+- Are models, baselines, and metrics correctly represented?
+- Are no invented components added?
+
+---------------------------------------------------
+2. COMPLETENESS OF EXPERIMENTAL DESIGN (1–5)
+- Objective
+- Dataset
+- Preprocessing
+- Model/Architecture
+- Train/test setup
+- Evaluation methods
+- Baselines
+- Strengths and limitations
+
+---------------------------------------------------
+3. ERROR SEVERITY ASSESSMENT (1–5)
+Based on error categories:
+- Incorrect named entities
+- Incorrect numbers
+- Incorrect words
+- Context errors
+- Hallucinations
+- Not checkable
+- Other errors
+
+Severity scale:
+5 = No errors
+4 = Minor errors
+3 = Moderate errors
+2 = Major errors
+1 = Critical errors
+
+---------------------------------------------------
+4. SCIENTIFIC COHERENCE & LOGICAL FLOW (1–5)
+- Does the design flow in a logical sequence?
+- Do evaluation metrics match the task?
+- Are the steps consistent?
+- Does the model description lead naturally to the evaluation?
+
+---------------------------------------------------
+### FINAL COMPOSITE SCORE (0–100)
+Compute using:
+Total = (Accuracy*0.35) + (Completeness*0.25) + (Error Severity*0.20) + (Coherence*0.20)
+
+---------------------------------------------------
+### OUTPUT FORMAT (STRICT JSON ONLY)
+
+{
+   "paper_id": "{PAPER_ID}",
+   "model": "{MODEL}",
+   "scores": {
+       "scientific_accuracy": X,
+       "completeness": X,
+       "error_severity": X,
+       "scientific_coherence": X,
+       "composite_score": XX.X
+   },
+   "justification": "6–10 sentence critical analysis referencing specific evidence from the designs."
+}
